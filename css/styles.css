@@ -21,8 +21,8 @@ img {
 body {
   margin: 0;
   font-size: 1.6rem;
-  /* background-color: #f1b87e; */
-  background-color: #ffffff;
+  background-color: #f1b87e;
+  /* background-color: #ffffff; */
   color:#4b2310;
   --BKcolor-HDFT: #ce9049;
 }
