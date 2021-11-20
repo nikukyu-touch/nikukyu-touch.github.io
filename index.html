@@ -1,82 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <!-- <meta name="description" content="○○工房のポートフォリオです。web(UI/UX)デザイン。HTML＆CSSコーディング。"> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="description" content="webページ制作サポート 猫の手工房のポートフォリオです。UI/UXデザイン。HTML＆CSSコーディング。ホームページ制作"> -->
   <!-- <link rel="canonical" href=""> -->
-  <title>工房ポートフォリオ</title>
-  <link rel="icon" href="ashiato.png">
+  <title>猫の手工房ポートフォリオ</title>
+  <link rel="icon" href="img/ashiato.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <header>
-    <nav>
-      <div class="nav">
-        <a href="#">HOME</a>
-        <a href="#profilelink">Plofile</a>
-        <a href="#works">Works</a>
-        <!-- <a href="#hobby">Hobby</a> -->
-      </div>
-      <div class="sitetitle">
-        <!-- <img src="img/neko_on_keyboard01.jpg" alt="ヘッダー画像"> -->
-        <p>My Portfolio</p>
-      </div>
+    <nav class="local-link">
+      <ul>
+        <li>
+          <a href="#">HOME</a>
+        </li>
+        <li>
+          <a href="#works">Works</a>
+        </li>
+        <li>
+          <a href="#profile">Plofile</a>
+        </li>
+      </ul>
     </nav>
+    <div class="header-color"></div>
+    <div class="sitetitle">
+      <!-- <img src="img/neko_on_keyboard01.jpg" alt="ヘッダー画像"> -->
+      <h1>My Portfolio</h1>
+    </div>
   </header>
 
-  <section id="profilelink">
+  <section id="works">
+    <h1>Works</h1>
+    <ul>
+      <li>
+        <a href="https://nikukyu-touch.github.io/hand_soap/" target="_blank">Work03<br>
+          <img src="img/ハンドソープ見本.jpg" alt="サンプル03">
+        </a>
+        <p>製品・商品紹介ページ<br>(今件はハンドソープ)</p>
+      </li>
+      <li>
+        <a href="https://nikukyu-touch.github.io/shop_calm/index_Fixed_hdr.html" target="_blank">Work02<br>
+          <img src="img/架空ショップcalm_見本.jpg" alt="サンプル01">
+        </a>
+        <p>アパレルショップ<br>ランディングページ</p>
+      </li>
+      <li>
+        <a href="https://nikukyu-touch.github.io/cafe_calm/index.html" target="_blank">Work01<br>
+          <img src="img/架空カフェcalm_見本.jpg" alt="サンプル02">
+        </a>
+        <p>カフェ<br>ホームページ</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="profile" class="scroll">
     <h1>Profile</h1>
-    <div class="profile">
-      <div class="icon">
-        <img src="img/DeskTop_neko.png" width="170" alt="○○工房のアイコン">
-      </div>
-      <div class="info">
-        <h2>○○工房</h2>
-        <ul>
-          <li>web(UI/UX)デザイナーです</li>
+    <div class="container">
+      <div class="profile">
+        <p>webページ制作サポート</p>
+        <h2>猫の手工房<img src="img/猫の足跡_縮小_darkbrown.png"></h2>
+        <ul class="selfpr">
+          <li>web(UI/UX)デザイナー</li>
+          <li>ホームページ(HP)作成<br>ランディングページ(LP)制作</li>
           <li>HTML・CSSコーディング</li>
           <li>レスポンシブウェブデザイン<br>(スマホ ⇔ タブレット ⇔ PC)</li>
           <!-- <li>SEO対策</li> -->
-          <li>即日対応可能</li>
+          <li>即応可能</li>
+          <li>打ち合わせ重視</li>
           <li>細かい修正にも対応します</li>
           <li>責任を持って対応させていただきます</li>
         </ul>
       </div>
+      <div class="icon-sns">
+        <img class="nekoicon" src="img/DeskTop_neko_640x640.png" alt="猫の手工房のアイコン">
+        <a class="twitter" href="https://twitter.com/nikukyu_touch" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
   </section>
 
-  <section id="works">
-    <h1>Works</h1>
-    <ul class="works">
-      <li class="each-works">
-        <a href="" target="_blank">サンプルサイト01</a>
-        <a href="" target="_blank">
-          <img src="img/note_neko.png" alt="サンプル01">
-        </a>
-        <p>シンプルページ</p>
-      </li>
-      <li class="each-works">
-        <a href="" target="_blank">サンプルサイト02</a>
-        <a href="" target="_blank">
-          <img src="img/neko_silhouette_notepc.png" alt="サンプル02">
-        </a>
-        <p>アニメーション</p>
-      </li>
-      <li class="each-works">
-        <a href="" target="_blank">サンプルサイト03</a>
-        <a href="" target="_blank">
-          <img src="img/Standing_figure_Black.png" alt="サンプル03">
-        </a>
-        <p>ECサイト</p>
-      </li>
-    </ul>
-  </section>
   <div class="return">
-    <a href="#">HOME</a>
+    <a href="#">TOP</a>
   </div>
-  <footer>(c) ○○工房</footer>
+  <footer>&copy; 猫の手工房</footer>
+  <script src="js/scroll.js"></script>
 </body>
 </html>
