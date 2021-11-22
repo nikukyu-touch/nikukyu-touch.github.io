@@ -286,10 +286,10 @@ footer {
 /* small screen */
 @media (max-width: 599px) {
   .local-link {
-    height: 20px;
+    height: 22px;
   }
   .header-color {
-    height: 20px; /* 上部固定navと高さを合わせる */
+    height: 22px; /* 上部固定navと高さを合わせる */
   }
   .local-link {
     justify-content: space-between;
