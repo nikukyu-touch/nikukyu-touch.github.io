@@ -363,6 +363,7 @@ footer {
   }
   #works li img:hover {
     transform: none;
+    opacity: 1;
   }
 
   #profile {
