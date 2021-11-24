@@ -362,7 +362,7 @@ footer {
     transition: all 0s;
   }
   #works li img:hover {
-    transform: scale(1.05, 1.05);
+    transform: none;
   }
 
   #profile {
