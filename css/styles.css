@@ -23,16 +23,15 @@ img {
 body {
   margin: 0;
   font-size: 1.6rem;
-  background-color: #f1b87e;
-  /* background-color: #ffffff; */
-  color:#4b2310;
-  --BKcolor-HDFT: #ce9049;
+  background-color: white;
+  color:#464646;
+  --BKcolor-HDFT: #9e9e9e;
 }
 
 .local-link {
   position: fixed;
   top: 0;
-  background-color: #ce9049b6;
+  background-color: #b8b8b8b6;
   width: 100%;
   height: 32px;
   display: flex;
@@ -94,7 +93,7 @@ body {
 .sitetitle {
   width: 100%;
   height: 400px;
-  background: 0% 70%/cover url(../img/neko_on_keyboard01.jpg);
+  background: 0% 70%/cover url(../img/neko_on_keyboard_mono.jpg);
   z-index: 1;
 }
 
@@ -139,7 +138,7 @@ body {
   width: var(--img-width);
   margin: 5px;
   padding: 5px;
-  border: white solid 3px;
+  border: #aaaaaa solid 3px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -165,7 +164,7 @@ body {
 }
 #works li img:hover {
   opacity: .8;
-  transform: scale(1.3, 1.3);
+  transform: scale(1.2, 1.2);
 }
 
 #profile {
