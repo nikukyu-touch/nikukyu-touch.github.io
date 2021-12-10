@@ -25,13 +25,13 @@ body {
   font-size: 1.6rem;
   background-color: white;
   color:#464646;
-  --BKcolor-HDFT: #9e9e9e;
+  --BKcolor-HDFT: #cccccc;
 }
 
 .local-link {
   position: fixed;
   top: 0;
-  background-color: #b8b8b8b6;
+  background-color: #b8b8b8b8;
   width: 100%;
   height: 32px;
   display: flex;
@@ -104,7 +104,7 @@ body {
   left: 20px;
   margin: 0;
   /* color: white; */
-  color: #aaaaaa;
+  color: #383838;
   /* 縁取り */
   text-shadow:
   1px  1px white,
