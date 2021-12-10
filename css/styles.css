@@ -98,13 +98,13 @@ body {
 }
 
 .sitetitle h1 {
-  font: 500 5rem 'Comic Sans MS', cursive;
+  font: lighter 5rem 'Comic Sans MS', cursive;
   position: absolute;
   top: 362px;
   left: 20px;
   margin: 0;
   /* color: white; */
-  color: #383838;
+  color: #aaaaaa;
   /* 縁取り */
   text-shadow:
   1px  1px white,
@@ -115,6 +115,7 @@ body {
   0px  1px white,
   -1px  0px white,
   0px -1px white;
+  letter-spacing: .3rem;
   animation: fadein 4s ease-in-out;
 }
 @keyframes fadein {
