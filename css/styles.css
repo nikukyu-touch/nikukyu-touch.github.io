@@ -73,11 +73,13 @@ body {
   display: inline-block;
   vertical-align: middle;
   line-height: 2.2rem;
+}
+.local-link a,.request a {
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   transition: all .5s;
 }
-.local-link a:hover, .return a:hover,.profile .crowdworks:hover {
+.local-link a:hover, .return a:hover, .request a:hover {
   border-bottom: 2px solid currentColor;
   animation: none;
 }
@@ -195,9 +197,11 @@ body {
   text-align: center;
 }
 
-#profile .container {
-  width: 600px;
+#profile .container, .request {
+  max-width: 600px;
   margin: 0 auto;
+}
+#profile .container {
   display: flex;
   justify-content: space-between;
 }
@@ -222,14 +226,27 @@ body {
   padding-left: 1em;
 }
 
-.profile .crowdworks {
-  display: inline-block;
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: .8em;
-  margin-top: .3em;
-  border-bottom: 2px solid transparent;
-  transition: all .5s;
+.request p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.request ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.request li {
+  height: 40px;
+  margin-right: 3em;
+}
+
+.request img {
+  height: 100%;
+  width: 160px;
+  object-fit: contain;
 }
 
 .icon-sns {
@@ -280,7 +297,7 @@ footer {
     transform: scale(1.2, 1.2);
   }
 
-  .local-link a, .return a,.profile .crowdworks {
+  .local-link a, .return a,.request a {
     animation: flicker 1.5s infinite alternate ease-in-out;
   }
   @keyframes flicker {
@@ -400,10 +417,6 @@ footer {
     margin: 0.5em 0;
     font-size: 1.6rem;
   }
-  .profile .crowdworks {
-    font-size: 2.2rem;
-    margin-top: .4em;
-  }
   .icon-sns {
     width: 100px;
     position: absolute;
@@ -416,6 +429,23 @@ footer {
   }
   .icon-sns a {
     font-size: 1.4em;
+  }
+
+  .request {
+    width: 94%;
+    margin: 1em 3% 0;
+
+  }
+  .request ul {
+    margin-top: 5px;
+    justify-content: space-evenly;
+  }
+  .request li {
+    height: 30px;
+    margin: 0;
+  }
+  .request img {
+    width: 120px;
   }
 
   .return a {
