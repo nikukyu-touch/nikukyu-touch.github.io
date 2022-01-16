@@ -79,7 +79,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: all .5s;
 }
-.local-link a:hover, .return a:hover, .request a:hover {
+.local-link a:hover, .return a:hover, .request a:hover, #works li p:nth-of-type(2):hover {
   border-bottom: 2px solid currentColor;
   animation: none;
 }
@@ -161,6 +161,18 @@ body {
 #works li a {
   font-weight: bold;
   font-size: 2rem;
+  color: inherit;
+}
+#works li p:nth-of-type(2) {
+  line-height: 1;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
+  animation: flicker 1.5s infinite alternate ease-in-out;
+}
+#works li p a {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1;
   color: inherit;
 }
 
@@ -297,7 +309,7 @@ footer {
     transform: scale(1.2, 1.2);
   }
 
-  .local-link a, .return a,.request a {
+  .local-link a, .return a, .request a, #works li p:nth-of-type(2) {
     animation: flicker 1.5s infinite alternate ease-in-out;
   }
   @keyframes flicker {
