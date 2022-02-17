@@ -56,13 +56,53 @@ body {
   vertical-align: middle;
 }
 
-.local-link ul {
+.local-link > ul {
   list-style: none;
   min-width: 400px;
   margin: 0 auto 0 4rem;
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+/* メガメニュー */
+.local-link .works {
+  position: relative;
+}
+.local-link .works .mega {
+  position: absolute;
+  top: 100%;
+  left: -200%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,0.6);
+  /* width: 400px; */
+  width: 25em;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+}
+.local-link .works:hover .mega {
+  opacity: 1;
+  visibility: visible;
+}
+.mega li a, .mega li p {
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 0;
+  color: white;
+}
+.mega li {
+  height: 12vh;
+  margin: 5px;
+  padding: 5px;
+  border: #aaaaaa solid 3px;
+  display: flex;
+  align-items: center;
+}
+.mega li a img {
+  height: 9vh;
+  object-fit: contain;
 }
 
 .local-link a {
@@ -72,14 +112,14 @@ body {
   margin-top: 2px;
   display: inline-block;
   vertical-align: middle;
-  line-height: 2.2rem;
+  line-height: .7;
 }
 .local-link a,.request a {
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   transition: all .5s;
 }
-.local-link a:hover, .return a:hover, .request a:hover, #works li p:nth-of-type(2):hover {
+.local-link a:hover, .return a:hover, .request a:hover, #works li p a:hover {
   border-bottom: 2px solid currentColor;
   animation: none;
 }
@@ -105,7 +145,6 @@ body {
   top: 362px;
   left: 20px;
   margin: 0;
-  /* color: white; */
   color: #aaaaaa;
   /* 縁取り */
   text-shadow:
@@ -131,10 +170,10 @@ body {
 
 #works {
   margin-top: 60px;
+  --img-width: 320px;
 }
 
 #works h1 {
-  font: bold 5rem 'Comic Sans MS', cursive;
   text-align: center;
 }
 
@@ -145,7 +184,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  --img-width: 320px;
 }
 
 #works li {
@@ -163,17 +201,16 @@ body {
   font-size: 2rem;
   color: inherit;
 }
-#works li p:nth-of-type(2) {
-  line-height: 1;
-  border-bottom: 2px solid transparent;
-  transition: all .5s;
-  animation: flicker 1.5s infinite alternate ease-in-out;
-}
+
 #works li p a {
   font-weight: bold;
   font-size: 1.8rem;
+  display: inline-block;
+  vertical-align: middle;
   line-height: 1;
   color: inherit;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
 }
 
 #works li p {
@@ -204,7 +241,6 @@ body {
 }
 
 #profile h1 {
-  font: bold 5rem 'Comic Sans MS', cursive;
   margin: 0 0 20px 0;
   text-align: center;
 }
@@ -309,7 +345,7 @@ footer {
     transform: scale(1.2, 1.2);
   }
 
-  .local-link a, .return a, .request a, #works li p:nth-of-type(2) {
+  .local-link a, .return a, .request a, #works li p a {
     animation: flicker 1.5s infinite alternate ease-in-out;
   }
   @keyframes flicker {
@@ -332,6 +368,10 @@ footer {
   }
   .header-color {
     height: 22px; /* 上部固定navと高さを合わせる */
+  }
+  /* メガメニュー無効 */
+  .local-link .works .mega {
+    display: none;
   }
   .local-link {
     justify-content: space-between;
