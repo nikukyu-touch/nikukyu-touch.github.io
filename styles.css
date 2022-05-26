@@ -1,0 +1,511 @@
+/* common */
+html {
+  font-size: 62.5%;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: currentColor;
+}
+
+h1 {
+  font: bold 5rem 'Comic Sans MS', cursive;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  background-color: white;
+  color:#464646;
+  --BKcolor-HDFT: #cccccc;
+}
+
+.local-link {
+  position: fixed;
+  top: 0;
+  background-color: #b8b8b8b8;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 9;
+}
+.header-color {
+  height: 32px; /* 上部固定navと高さを合わせる */
+  background-color: var(--BKcolor-HDFT);
+}
+
+.local-link h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.2em;
+  margin-left: 1em;
+}
+.local-link h1 img {
+  margin-left: 0.2em;
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+.local-link > ul {
+  list-style: none;
+  min-width: 400px;
+  margin: 0 auto 0 4rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* メガメニュー */
+.local-link .works {
+  position: relative;
+}
+.local-link .works .mega {
+  position: absolute;
+  top: 100%;
+  left: -200%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,0.6);
+  /* width: 400px; */
+  width: 25em;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s ease;
+}
+.local-link .works:hover .mega {
+  opacity: 1;
+  visibility: visible;
+}
+.mega li a, .mega li p {
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 0;
+  color: white;
+}
+.mega li {
+  height: 12vh;
+  margin: 5px;
+  padding: 5px;
+  border: #aaaaaa solid 3px;
+  display: flex;
+  align-items: center;
+}
+.mega li a img {
+  height: 9vh;
+  object-fit: contain;
+}
+
+.local-link a {
+  font: 600 2.4rem sans-serif;
+  color: inherit;
+  padding: 0;
+  margin-top: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: .7;
+}
+.local-link a,.request a {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
+}
+.local-link a:hover, .return a:hover, .request a:hover, #works li p a:hover {
+  border-bottom: 2px solid currentColor;
+  animation: none;
+}
+
+/* header img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0% 70%;
+  z-index: 10;
+} */
+
+.sitetitle {
+  width: 100%;
+  height: 400px;
+  background: 0% 70%/cover url(../img/neko_on_keyboard_mono.jpg);
+  z-index: 1;
+}
+
+.sitetitle h1 {
+  font: lighter 5rem 'Comic Sans MS', cursive;
+  position: absolute;
+  top: 362px;
+  left: 20px;
+  margin: 0;
+  color: #aaaaaa;
+  /* 縁取り */
+  text-shadow:
+  1px  1px white,
+  -1px  1px white,
+  1px -1px white,
+  -1px -1px white,
+  1px  0px white,
+  0px  1px white,
+  -1px  0px white,
+  0px -1px white;
+  letter-spacing: .3rem;
+  animation: fadein 4s ease-in-out;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#works {
+  margin-top: 60px;
+  --img-width: 320px;
+}
+
+#works h1 {
+  text-align: center;
+}
+
+#works ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#works li {
+  width: var(--img-width);
+  margin: 5px;
+  padding: 5px;
+  border: #aaaaaa solid 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#works li a {
+  font-weight: bold;
+  font-size: 2rem;
+  color: inherit;
+}
+
+#works li p a {
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  color: inherit;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
+}
+
+#works li p {
+  text-align: left;
+  margin: 0 auto;
+}
+
+#works li img {
+  width: var(--img-width);
+  /* height: var(--img-width); */
+  object-fit: contain;
+  opacity: 1;
+  transition: all 0.5s;
+}
+#works li img:hover {
+  opacity: .8;
+  transform: scale(1.2, 1.2);
+}
+
+#profile {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+#profile.show {
+  opacity: 1;
+}
+
+#profile h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+#profile .container, .request {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#profile .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.profile h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.profile h2 img {
+  margin-left: 0.2em;
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+.selfpr {
+  padding-left: 1em;
+}
+
+.request p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.request ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.request li {
+  height: 40px;
+  margin-right: 3em;
+}
+
+.request img {
+  height: 100%;
+  width: 160px;
+  object-fit: contain;
+}
+
+.icon-sns {
+  width: 200px;
+  text-align: right;
+}
+
+.icon-sns img.nekoicon {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.icon-sns a {
+  margin: .5em .5em 0 0;
+  display: block;
+  color: gray;
+  font-size: 2em;
+}
+
+.return {
+  margin-right: 2%;
+  text-align: right;
+}
+
+.return a {
+  font: bold 2.4rem 'Comic Sans MS', cursive;
+  line-height: 1em;
+  color: inherit;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: all .5s;
+}
+
+footer {
+  background-color: var(--BKcolor-HDFT);
+  line-height: 40px;
+  text-align: center;
+}
+
+/* medium screen */
+@media (max-width: 1024px) {
+  #works ul {
+    --img-width: 40vw;
+  }
+
+  #works li img:hover {
+    opacity: .9;
+    transform: scale(1.2, 1.2);
+  }
+
+  .local-link a, .return a, .request a, #works li p a {
+    animation: flicker 1.5s infinite alternate ease-in-out;
+  }
+  @keyframes flicker {
+    0% {
+      border-bottom: 2px solid currentColor;
+    }
+    100% {
+      border-bottom: 2px solid transparent;
+    }
+  }
+  #profile {
+    margin-bottom: 50px;
+  }
+}
+
+/* small screen */
+@media (max-width: 599px) {
+  .local-link {
+    height: 22px;
+  }
+  .header-color {
+    height: 22px; /* 上部固定navと高さを合わせる */
+  }
+  /* メガメニュー無効 */
+  .local-link .works .mega {
+    display: none;
+  }
+  .local-link {
+    justify-content: space-between;
+  }
+  .local-link h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    margin-left: 1em;
+  }
+  .local-link h1 img {
+    margin-left: 0.2em;
+    height: 1.2em;
+  }
+  .local-link ul {
+    margin: 0 1em 0 auto;
+    min-width: 0;
+    width: 55%;
+  }
+  .local-link a {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+  }
+  .sitetitle {
+    height: 220px;
+  }
+  /* .sitetitle h1 {
+    font: bold 5rem 'Comic Sans MS', cursive;
+    position: absolute;
+    top: 362px;
+    left: 20px;
+    color: white;
+    margin: 0;
+    animation: fadein 4s ease-in-out;
+  } */
+  .sitetitle h1 {
+    font-size: 3.2rem;
+    top: 206px;
+  }
+
+  #works {
+    margin-top: 20px;
+  }
+  #works h1 {
+    margin: 0;
+    font-size: 3.5rem;
+  }
+  #works ul {
+    display: block;
+  }
+  #works li {
+    box-sizing: border-box;
+    width: 98%;
+    margin: 1%;
+    height: auto;
+  }
+  #works li a {
+    font-size: 1.8rem;
+  }
+  #works li p {
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+  #works li img {
+    width: 100%;
+    height: auto;
+    transition: all 0s;
+  }
+  #works li img:hover {
+    transform: none;
+    opacity: 1;
+  }
+
+  #profile {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  #profile h1 {
+    font-size: 3.5rem;
+    margin: 0 0 8px 0;
+  }
+  #profile .container {
+    width: 94%;
+    margin: auto 3%;
+    position: relative;
+  }
+  .profile p {
+    font-size: 1.5rem;
+  }
+  .profile h2 {
+    font-size: 2rem;
+  }
+  .selfpr {
+    margin: 0.5em 0;
+    font-size: 1.6rem;
+  }
+  .icon-sns {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .icon-sns img.nekoicon {
+    width: 100px;
+    height: 100px;
+  }
+  .icon-sns a {
+    font-size: 1.4em;
+  }
+
+  .request {
+    width: 94%;
+    margin: 1em 3% 0;
+
+  }
+  .request ul {
+    margin-top: 5px;
+    justify-content: space-evenly;
+  }
+  .request li {
+    height: 30px;
+    margin: 0;
+  }
+  .request img {
+    width: 120px;
+  }
+
+  .return a {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
